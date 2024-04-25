@@ -1,0 +1,270 @@
+@charset "UTF-8";
+:root {
+  --cloudspositionX:0;
+  --rotate:15s; /*la durée souhaitée en secondes*/
+}
+
+.story__article p {
+  animation: fadeInText 1.5s 0.5s forwards;
+}
+
+/** ANIMATION DES FLEURS PAGE PRINCIPALE AVEC UTILISATION KEYFRAMES POUR LA ROTATION  **/
+@keyframes rotate-flower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* AJOUT DE L'ANIMATION ROTATION SUR LES FLEURS AVEC LA VARIABLE --rotate DEFINIE DANS root */
+.story h2::after,
+.story__article::after,
+.my-studio h2::after,
+.my-studio h2::before,
+.nomination::after,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+  animation: rotate-flower var(--rotate) linear infinite;
+}
+
+.sunflower,
+.orchid {
+  animation: rotate-flower 10s linear infinite;
+}
+
+#studio h2::before,
+#studio h2::after {
+  animation: rotate-flower 10s linear infinite;
+}
+
+/** HEADER VIDEO & ANIMATION DU LOGO  **/
+@keyframes floatingLogo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.video-oscars {
+  z-index: 1;
+  position: relative;
+}
+
+.banner img {
+  animation: floatingLogo 5s ease-in-out infinite;
+  animation-delay: 1ms;
+}
+
+/** FADE IN SUR SECTIONS **/
+.banner {
+  height: 500px;
+  animation: fadeinDownBanner 5s;
+}
+.banner img {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Style de base pour les titres à animer */
+.word-animation {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Utilisation d'une transition pour un effet de fondu */
+}
+
+/* Animation pour afficher les titres */
+.animate-title .word-animation {
+  opacity: 1; /* Assurez-vous que l'opacité est à 1 pour afficher les titres */
+  animation: animate-title 1s forwards; /* Utilisation de l'animation animate-title */
+}
+
+/* Définition de l'animation */
+@keyframes animate-title {
+  0% {
+    opacity: 0; /* Au début de l'animation, l'opacité est à 0 */
+  }
+  100% {
+    opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
+  }
+}
+/** SECTION  OSCARS 2022 **/
+/* Masquer les fleurs du footer */
+.site-footer::before,
+.site-footer::after {
+  display: none;
+}
+
+.oscars {
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  margin-top: 100px;
+  justify-content: space-evenly;
+  animation: fadeinUpSections 5s;
+}
+.oscars::before {
+  content: url("../../assets/img/Sunflower.png");
+  position: relative;
+  left: 0em;
+  top: -8em;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.5% 39%;
+}
+.oscars h3 {
+  background-image: url("../../assets/img/orange_oscars_bg.png");
+  background-size: 100%;
+  text-align: left;
+  font-size: 2.3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  width: 644px;
+}
+.oscars .logo-oscars {
+  width: 320px;
+  padding-top: 20px;
+}
+.oscars::after {
+  content: url("../../assets/img/orchid.png");
+  position: relative;
+  right: 0em;
+  top: -12em;
+  animation: rotate-animation 15s infinite linear;
+  transform-origin: 49.1% 41.8%;
+}
+
+/*DEPLACEMENT DES IMAGES DANS LA NOUVELLE SECTION OSCAR
+
+/* Déplacement de l'image orchid vers la droite */
+.orchid {
+  position: relative;
+  top: -140px;
+  left: 530px;
+}
+
+/* Déplacement de l'image sunflower vers la gauche */
+.sunflower {
+  position: relative;
+  top: -100px;
+  right: 330px;
+}
+
+.orange-image {
+  position: relative;
+  bottom: 150px;
+  left: 180px;
+}
+
+/*SECTION PLACE NUAGE*/
+.story #place {
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url("../assets/images/image_place.png") !important;
+  background-repeat: no-repeat;
+  animation: fade-in-background 2s;
+}
+@media screen and (max-width: 920px) {
+  .story #place > div {
+    margin: 0;
+  }
+}
+.story #place .clouds {
+  position: relative;
+  max-width: none;
+  align-items: end;
+  filter: blur(10px);
+}
+
+.big-cloud {
+  top: -25px;
+  right: 50px;
+  position: absolute;
+}
+@media screen and (max-width: 920px) {
+  .big-cloud {
+    right: -170px;
+  }
+}
+
+.little-cloud {
+  right: 400px;
+  top: 80px;
+  position: absolute;
+}
+@media screen and (max-width: 920px) {
+  .little-cloud {
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .big-cloud,
+  .little-cloud {
+    display: none;
+  }
+}
+/**************** SECTION LE LIEUX *************************/
+@keyframes fade-in-background {
+  0% {
+    background-position: 0 400px;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0;
+    opacity: 1;
+  }
+}
+/*SECTION PERSONNAGE SWIPER*/
+.swiper {
+  width: 800px;
+  height: 600px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+figure img {
+  padding-top: 50px;
+  max-width: none;
+}
+@media screen and (max-width: 1100px) {
+  figure img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  figure img {
+    width: 200px;
+  }
+}
+
+.swipper-slide img {
+  padding-top: 50px;
+  max-width: none;
+}
+@media screen and (max-width: 1100px) {
+  .swipper-slide img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .swipper-slide img {
+    width: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */
