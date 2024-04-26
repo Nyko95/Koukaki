@@ -78,26 +78,52 @@ console.log(skrollr);
 //initialise la hauteur du body en auto pour s'adapter dynamiquement à la taille de son contenu
 document.body.style.height = "auto";
 
-
-// Crée un carrousel interactif avec l'effet de type "coverflow" et des paramètres personnalisés
 const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
   effect: "coverflow",
   grabCursor: true,
-  slidesPerView: "auto", // Nombre total de diapositives à afficher (1 principale + 2 adjacentes)
-  centeredSlides: true, // Centrer la diapositive principale
-  spaceBetween: 100, // Espace entre les diapositives
+  slidesPerView: "auto",
+  slidesPerGroup: 1,
+  centeredSlides: true,
+  spaceBetween: 15,
   loop: true,
   coverflowEffect: {
-    depth: 200, //Décalage de profondeur en px - défaut 100
-    modifier: 1, //Multiplicateur d'effet - défaut 1
-    rotate: 200, //Rotation du slide en degrés - défaut 50
-    scale: 0.6, //Effet d'échelle de diapositive - défaut 1
-    slideShadows: false, //Active les ombres des diapositives - défaut TRUE
-    stretch: 0, //Étirer l'espace entre les diapositives (en px) -défaut 0
+      depth: 0,
+      modifier: 1,
+      rotate: 60,
+      scale: 0.6,
+      slideShadows: false,
+      stretch: 0,
   },
   autoplay: {
-    delay: 4000,
-    //reverseDirection: true, //cette ligne pour inverser le sens de l'autoplay
+      delay: 4000,
   },
+});
+
+/*MENU BURGER*/
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const body = document.querySelector('body');
+  const burgerMenu = document.getElementById('burger-menu');
+
+  // Ajoute un gestionnaire d'événements pour le clic sur le bouton burger
+  menuToggle.addEventListener('click', function() {
+      // Ajoute ou supprime la classe "menu-open" au corps de la page
+      body.classList.toggle('menu-open');
+
+      // Affiche dans la console si la classe "menu-open" est ajoutée ou retirée
+      if (body.classList.contains('menu-open')) {
+          console.log('Menu ouvert');
+      } else {
+          console.log('Menu fermé');
+      }
+  });
+
+  // Ferme le menu burger lorsque l'utilisateur clique en dehors du menu
+  document.addEventListener('click', function(event) {
+      if (!burgerMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+          body.classList.remove('menu-open');
+          console.log('Menu fermé');
+      }
+  });
 });

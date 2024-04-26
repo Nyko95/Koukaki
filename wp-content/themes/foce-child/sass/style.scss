@@ -90,7 +90,7 @@
 }
 
 /* Animation pour afficher les titres */
-.animate-title .word-animation {
+.animate-title .word-animation{
     opacity: 1; /* Assurez-vous que l'opacité est à 1 pour afficher les titres */
     animation: animate-title 1s forwards; /* Utilisation de l'animation animate-title */
 }
@@ -229,7 +229,7 @@
     }
 }
 
-/**************** SECTION LE LIEUX *************************/
+/* SECTION LE LIEUX NUAGE*/
 // effet de fade-in sur l'image de fond de la section
 @keyframes fade-in-background {
 
@@ -246,6 +246,11 @@
 }
 
 /*SECTION PERSONNAGE SWIPER*/
+
+/* DECALAGE TITRE PERSONNAGES SUR LA GAUCHE */
+.story #characters h3 {
+    margin-right: 700px;
+}
 
 .swiper {
     width: 800px;
@@ -283,7 +288,7 @@ figure {
     }
 }
 
-.swipper-slide {
+.swiper-slide {
 	& img {
         padding-top: 50px;
         max-width: none;
@@ -295,5 +300,93 @@ figure {
         }
     }
  }
+
+ /* SECTION MENU BURGER*/
+
+/* Masquer le menu burger par défaut */
+.burger-menu {
+    display: none;
+}
+
+/* Afficher le bouton du menu burger */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 40px;
+    height:100;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 999; /* Assurez-vous que le bouton reste au-dessus de tout autre contenu */
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Styles des lignes du bouton burger */
+.menu-toggle .line {
+    height: 2px;
+    background-color: #000;
+    display: block;
+    width: 100%;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styles du menu burger ouvert */
+.menu-open .burger-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond semi-transparente */
+    z-index: 998; /* Assurez-vous que le menu reste en-dessous du bouton du menu */
+}
+
+/* Styles pour la liste des éléments du menu burger */
+.burger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styles pour chaque élément de la liste du menu burger */
+.burger-menu ul li {
+    margin-bottom: 20px; /* Espacement entre chaque élément */
+    text-align: center;
+}
+
+/* Styles pour les liens du menu burger */
+.burger-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Styles pour les liens du menu burger au survol */
+.burger-menu ul li a:hover {
+    color: #ff5C00; /* Changement de couleur au survol */
+}
+
+/* Styles pour le menu déroulant */
+.burger-menu {
+    /* Position fixe pour que le menu soit toujours visible */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Prendre toute la largeur de la page */
+    height: 100%; /* Prendre toute la hauteur de la page */
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
+    z-index: 999; /* Assurez-vous que le menu soit au-dessus de tout autre contenu */
+}
+
+
 
 
