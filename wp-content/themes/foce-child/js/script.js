@@ -99,31 +99,15 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-/*MENU BURGER*/
-
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const body = document.querySelector('body');
-  const burgerMenu = document.getElementById('burger-menu');
-
-  // Ajoute un gestionnaire d'événements pour le clic sur le bouton burger
-  menuToggle.addEventListener('click', function() {
-      // Ajoute ou supprime la classe "menu-open" au corps de la page
-      body.classList.toggle('menu-open');
-
-      // Affiche dans la console si la classe "menu-open" est ajoutée ou retirée
-      if (body.classList.contains('menu-open')) {
-          console.log('Menu ouvert');
-      } else {
-          console.log('Menu fermé');
-      }
-  });
-
-  // Ferme le menu burger lorsque l'utilisateur clique en dehors du menu
-  document.addEventListener('click', function(event) {
-      if (!burgerMenu.contains(event.target) && !menuToggle.contains(event.target)) {
-          body.classList.remove('menu-open');
-          console.log('Menu fermé');
-      }
-  });
-});
+// ANIMATION BURGER ET APPARITION DU MENU FULLSCREEN
+const burger = document.querySelector(".menu-burger");
+const main = document.getElementById("primary");
+const footer = document.getElementById("colophon");
+const fullmenu = document.getElementById("menu");
+  //  Gestionnaire d'événements au clic sur menu Burger
+burger.addEventListener('click',()=>{
+	burger.classList.toggle('active');
+	main.classList.toggle('desactive');
+	footer.classList.toggle('desactive');
+	fullmenu.classList.toggle('visible');
+ });

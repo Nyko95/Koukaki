@@ -301,92 +301,217 @@ figure {
     }
  }
 
- /* SECTION MENU BURGER*/
+/***** HEADER AVEC MENU BURGER ********/
 
-/* Masquer le menu burger par défaut */
-.burger-menu {
-    display: none;
+.main-navigation{
+	.navigation-burger{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height:80px;
+		width:100%;
+		.site-title{
+			font-size: 16px;
+		}
+		a{
+			width: 90%;
+			text-align: center;
+			padding-left: 130px;
+		}
+		button{
+			width: 10%;
+			.line{
+				width: 30px;
+			}
+		}
+	}
 }
 
-/* Afficher le bouton du menu burger */
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    width: 40px;
-    height:100;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 999; /* Assurez-vous que le bouton reste au-dessus de tout autre contenu */
-    cursor: pointer;
-    background-color: transparent;
+/** Animation Menu Burger **/
+
+.menu-burger{
+	cursor: pointer;
+    position: relative;
+   	#span1{
+            transform: translateY(-0px);
+        }
+	#span3{
+            transform: translateY(+0px);
+        }
+		&.active {
+			#span1{
+				transform: translateY(+5px) rotateZ(45deg);
+			}
+			#span2{
+				background-color: transparent;
+			}
+			#span3{
+				transform: translateY(-5px) rotateZ(-45deg);
+			}
+		}
+    }
+
+
+
+/**  MENU NAVIGATION FULLSCREEN  **/
+
+.main-navigation {
+	#menu{
+		ul {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			list-style: none;
+			margin: 0;
+			animation: fadeinUpSections 2s; 
+		}
+		li {
+			position: relative;
+			font-size: 64px;
+			:hover{
+				font-weight: bold;
+				text-shadow: 0 0 10px orange;
+			}
+		}
+		a {
+			display: block;
+			text-decoration: none;
+		}
+	}
 }
 
-/* Styles des lignes du bouton burger */
-.menu-toggle .line {
-    height: 2px;
-    background-color: #000;
-    display: block;
-    width: 100%;
-    margin: 4px 0;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Styles du menu burger ouvert */
-.menu-open .burger-menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond semi-transparente */
-    z-index: 998; /* Assurez-vous que le menu reste en-dessous du bouton du menu */
-}
-
-/* Styles pour la liste des éléments du menu burger */
-.burger-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Styles pour chaque élément de la liste du menu burger */
-.burger-menu ul li {
-    margin-bottom: 20px; /* Espacement entre chaque élément */
-    text-align: center;
-}
-
-/* Styles pour les liens du menu burger */
-.burger-menu ul li a {
-    text-decoration: none;
-    color: #000;
-    font-size: 18px;
-    transition: color 0.3s ease-in-out;
-}
-
-/* Styles pour les liens du menu burger au survol */
-.burger-menu ul li a:hover {
-    color: #ff5C00; /* Changement de couleur au survol */
-}
-
-/* Styles pour le menu déroulant */
-.burger-menu {
-    /* Position fixe pour que le menu soit toujours visible */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; /* Prendre toute la largeur de la page */
-    height: 100%; /* Prendre toute la hauteur de la page */
-    background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond semi-transparente */
-    z-index: 999; /* Assurez-vous que le menu soit au-dessus de tout autre contenu */
+.main-navigation.toggled ul {
+	display:flex;    
 }
 
 
+/** Animations Menu Navigation FullScreen **/
+
+#menu{
+	display:none;
+	overflow:hidden;
+	background-color: #FFF5E9;
+	&::before{
+		content: url('../../assets/images/Orchid.png');
+		position:absolute;
+		margin-left: -65px;
+		margin-top: 30px;
+		animation: rotate-animation 15s infinite linear;
+		transform-origin: 50.1% 47.8%;
+		}
+	ul{
+		.logo-menu{
+			height: 15%;
+			justify-content: center;
+			animation: floatingLogoMenu 4s ease-in-out infinite;
+		}
+		li:nth-child(2){
+			&::before{
+				content: url('../../assets/images/blue_cat.png');
+				position:absolute;
+				margin-left:  -260px;
+				margin-top: -40px;
+				animation: floatingLogo 8s ease-in-out infinite;
+			}
+			&::after{
+				content: url('../../assets/images/Sunflower.png');
+				position:absolute;
+				margin-left: 500px;
+				margin-top:-200px;
+				animation: rotate-animation 15s infinite linear;
+				transform-origin: 49.5% 44%;
+			}
+		}
+		li:nth-child(3){
+			&::before{
+				content: url('../../assets/images/Flower.png');
+				position:absolute;
+				margin-left:-315px;
+				margin-top:90px;
+				animation: rotate-animation 15s infinite linear;
+				transform-origin: 50.1% 40.8%;
+			}
+			&::after{
+				content: url('../../assets/images/random_flower.png');
+				position:absolute;
+				margin-left: 830px;
+				margin-top: -200px;
+				animation: rotate-animation 15s infinite linear;
+				transform-origin: 50.1% 44.8%;	
+			}
+		}
+		li:nth-child(4){
+			&::before{
+				content: url('../../assets/images/yellow_cat.png');
+				position:absolute;
+				margin-left: -570px;
+				margin-top: 180px;
+				animation: floatingLogo 7s ease-in-out infinite;
+			}
+			&::after{
+				content: url('../../assets/images/black_cat.png');
+				position:absolute;
+				margin-left: 415px;
+				margin-top: -100px;
+				animation: floatingLogo 9s ease-in-out infinite;
+			}
+		}
+
+		li:nth-child(5){
+			&::after{
+				content: url('../../assets/images/hibiscus_footer.png');
+				position:absolute;
+				margin-left:730px;
+				margin-top: -280px;
+			}
+		}
+	}
+}
 
 
+/******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
+	
+#menu.visible{
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	height: 90vh;
+ 
+}
+
+main.desactive{
+	display:none;
+}
+
+footer.desactive{
+	display:none;
+}
+
+
+//** Animations  Menu FullScreen **/
+
+@keyframes floatingCats{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	50%{
+		transform: translate(10px, -15px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+
+@keyframes floatingLogoMenu{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	50%{
+		transform: translate(0px, 15px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
