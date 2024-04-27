@@ -353,7 +353,7 @@ figure img {
   background-color: #FFF5E9;
 }
 #menu::before {
-  content: url("../../assets/images/Orchid.png");
+  content: url("/assets/images/Orchid.png");
   position: absolute;
   margin-left: -65px;
   margin-top: 30px;
@@ -366,14 +366,14 @@ figure img {
   animation: floatingLogoMenu 4s ease-in-out infinite;
 }
 #menu ul li:nth-child(2)::before {
-  content: url("../../assets/images/blue_cat.png");
+  content: url("foce-child/assets/images/blue_cat.png");
   position: absolute;
   margin-left: -260px;
   margin-top: -40px;
   animation: floatingLogo 8s ease-in-out infinite;
 }
 #menu ul li:nth-child(2)::after {
-  content: url("../../assets/images/Sunflower.png");
+  content: url("foce-child/assets/images/Sunflower.png");
   position: absolute;
   margin-left: 500px;
   margin-top: -200px;
@@ -381,7 +381,7 @@ figure img {
   transform-origin: 49.5% 44%;
 }
 #menu ul li:nth-child(3)::before {
-  content: url("../../assets/images/Flower.png");
+  content: url("foce_child/assets/images/Flower.png");
   position: absolute;
   margin-left: -315px;
   margin-top: 90px;
@@ -389,7 +389,7 @@ figure img {
   transform-origin: 50.1% 40.8%;
 }
 #menu ul li:nth-child(3)::after {
-  content: url("../../assets/images/random_flower.png");
+  content: url("foce-child/assets/images/Random_Flower.png");
   position: absolute;
   margin-left: 830px;
   margin-top: -200px;
@@ -397,21 +397,21 @@ figure img {
   transform-origin: 50.1% 44.8%;
 }
 #menu ul li:nth-child(4)::before {
-  content: url("../../assets/images/yellow_cat.png");
+  content: url("foce-child/assets/images/yellow_cat.png");
   position: absolute;
   margin-left: -570px;
   margin-top: 180px;
   animation: floatingLogo 7s ease-in-out infinite;
 }
 #menu ul li:nth-child(4)::after {
-  content: url("../../assets/images/black_cat.png");
+  content: url("foce-child/assets/images/black_cat.png");
   position: absolute;
   margin-left: 415px;
   margin-top: -100px;
   animation: floatingLogo 9s ease-in-out infinite;
 }
 #menu ul li:nth-child(5)::after {
-  content: url("../../assets/images/hibiscus_footer.png");
+  content: url("foce-child/assets/images/Hibiscus_footer.png");
   position: absolute;
   margin-left: 730px;
   margin-top: -280px;
