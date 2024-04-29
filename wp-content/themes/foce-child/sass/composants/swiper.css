@@ -1,0 +1,55 @@
+/*SECTION PERSONNAGE SWIPER*/
+/* DECALAGE TITRE PERSONNAGES SUR LA GAUCHE */
+.story #characters h3 {
+  margin-right: 700px;
+}
+
+.swiper {
+  width: 800px;
+  height: 600px;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+figure img {
+  padding-top: 50px;
+  max-width: none;
+}
+@media screen and (max-width: 1100px) {
+  figure img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  figure img {
+    width: 200px;
+  }
+}
+
+.swiper-slide img {
+  padding-top: 50px;
+  max-width: none;
+}
+@media screen and (max-width: 1100px) {
+  .swiper-slide img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .swiper-slide img {
+    width: 200px;
+  }
+}/*# sourceMappingURL=swiper.css.map */

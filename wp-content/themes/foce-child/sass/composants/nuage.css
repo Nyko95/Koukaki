@@ -1,0 +1,59 @@
+/*SECTION PLACE NUAGE*/
+.story #place {
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url("../assets/images/image_place.png") !important;
+  background-repeat: no-repeat;
+  animation: fade-in-background 2s;
+}
+@media screen and (max-width: 920px) {
+  .story #place > div {
+    margin: 0;
+  }
+}
+.story #place .clouds {
+  position: relative;
+  max-width: none;
+  align-items: end;
+  filter: blur(10px);
+}
+
+.big-cloud {
+  top: -25px;
+  right: 50px;
+  position: absolute;
+}
+@media screen and (max-width: 920px) {
+  .big-cloud {
+    right: -170px;
+  }
+}
+
+.little-cloud {
+  right: 400px;
+  top: 80px;
+  position: absolute;
+}
+@media screen and (max-width: 920px) {
+  .little-cloud {
+    right: 160px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .big-cloud,
+  .little-cloud {
+    display: none;
+  }
+}
+/* SECTION LE LIEUX NUAGE*/
+@keyframes fade-in-background {
+  0% {
+    background-position: 0 400px;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0;
+    opacity: 1;
+  }
+}/*# sourceMappingURL=nuage.css.map */

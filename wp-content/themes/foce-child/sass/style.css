@@ -1,13 +1,4 @@
 @charset "UTF-8";
-:root {
-  --cloudspositionX:0;
-  --rotate:15s; /*la durée souhaitée en secondes*/
-}
-
-.story__article p {
-  animation: fadeInText 1.5s 0.5s forwards;
-}
-
 /** ANIMATION DES FLEURS PAGE PRINCIPALE AVEC UTILISATION KEYFRAMES POUR LA ROTATION  **/
 @keyframes rotate-flower {
   from {
@@ -37,28 +28,6 @@
 #studio h2::before,
 #studio h2::after {
   animation: rotate-flower 10s linear infinite;
-}
-
-/** HEADER VIDEO & ANIMATION DU LOGO  **/
-@keyframes floatingLogo {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  50% {
-    transform: translate(0px, -40px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-.video-oscars {
-  z-index: 1;
-  position: relative;
-}
-
-.banner img {
-  animation: floatingLogo 5s ease-in-out infinite;
-  animation-delay: 1ms;
 }
 
 /** FADE IN SUR SECTIONS **/
@@ -93,6 +62,28 @@
     opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
   }
 }
+/** HEADER VIDEO & ANIMATION DU LOGO  **/
+@keyframes floatingLogo {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -40px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.video-oscars {
+  z-index: 1;
+  position: relative;
+}
+
+.banner img {
+  animation: floatingLogo 5s ease-in-out infinite;
+  animation-delay: 1ms;
+}
+
 /** SECTION  OSCARS 2022 **/
 /* Masquer les fleurs du footer */
 .site-footer::before,
@@ -274,7 +265,7 @@ figure img {
   }
 }
 
-/***** HEADER AVEC MENU BURGER ********/
+/*** HEADER AVEC MENU BURGER ***/
 .main-navigation .navigation-burger {
   display: flex;
   flex-direction: row;
@@ -283,7 +274,7 @@ figure img {
   width: 100%;
 }
 .main-navigation .navigation-burger .site-title {
-  font-size: 16px;
+  font-size: 22px;
 }
 .main-navigation .navigation-burger a {
   width: 90%;
@@ -318,7 +309,7 @@ figure img {
   transform: translateY(-5px) rotateZ(-45deg);
 }
 
-/**  MENU NAVIGATION FULLSCREEN  **/
+/** MENU NAVIGATION FULLSCREEN **/
 .main-navigation #menu ul {
   height: 100%;
   display: flex;
@@ -332,9 +323,9 @@ figure img {
 .main-navigation #menu li {
   position: relative;
   font-size: 64px;
+  transition: color 0.3s ease;
 }
-.main-navigation #menu li :hover {
-  font-weight: bold;
+.main-navigation #menu li:hover {
   text-shadow: 0 0 10px orange;
 }
 .main-navigation #menu a {
@@ -342,15 +333,11 @@ figure img {
   text-decoration: none;
 }
 
-.main-navigation.toggled ul {
-  display: flex;
-}
-
 /** Animations Menu Navigation FullScreen **/
 #menu {
   display: none;
   overflow: hidden;
-  background-color: #FFF5E9;
+  background-color: #fff5e9;
 }
 #menu::before {
   content: url("/assets/images/Orchid.png");
@@ -366,14 +353,14 @@ figure img {
   animation: floatingLogoMenu 4s ease-in-out infinite;
 }
 #menu ul li:nth-child(2)::before {
-  content: url("foce-child/assets/images/blue_cat.png");
+  content: url("/assets/images/blue_cat.png");
   position: absolute;
   margin-left: -260px;
   margin-top: -40px;
   animation: floatingLogo 8s ease-in-out infinite;
 }
 #menu ul li:nth-child(2)::after {
-  content: url("foce-child/assets/images/Sunflower.png");
+  content: url("/assets/images/Sunflower.png");
   position: absolute;
   margin-left: 500px;
   margin-top: -200px;
@@ -381,7 +368,7 @@ figure img {
   transform-origin: 49.5% 44%;
 }
 #menu ul li:nth-child(3)::before {
-  content: url("foce_child/assets/images/Flower.png");
+  content: url("/assets/images/Flower.png");
   position: absolute;
   margin-left: -315px;
   margin-top: 90px;
@@ -389,7 +376,7 @@ figure img {
   transform-origin: 50.1% 40.8%;
 }
 #menu ul li:nth-child(3)::after {
-  content: url("foce-child/assets/images/Random_Flower.png");
+  content: url("/assets/images/Random_Flower.png");
   position: absolute;
   margin-left: 830px;
   margin-top: -200px;
@@ -397,21 +384,21 @@ figure img {
   transform-origin: 50.1% 44.8%;
 }
 #menu ul li:nth-child(4)::before {
-  content: url("foce-child/assets/images/yellow_cat.png");
+  content: url("/assets/images/yellow_cat.png");
   position: absolute;
   margin-left: -570px;
   margin-top: 180px;
   animation: floatingLogo 7s ease-in-out infinite;
 }
 #menu ul li:nth-child(4)::after {
-  content: url("foce-child/assets/images/black_cat.png");
+  content: url("/assets/images/black_cat.png");
   position: absolute;
   margin-left: 415px;
   margin-top: -100px;
   animation: floatingLogo 9s ease-in-out infinite;
 }
 #menu ul li:nth-child(5)::after {
-  content: url("foce-child/assets/images/Hibiscus_footer.png");
+  content: url("/assets/images/Hibiscus_footer.png");
   position: absolute;
   margin-left: 730px;
   margin-top: -280px;
@@ -454,4 +441,12 @@ footer.desactive {
   100% {
     transform: translate(0px, 0px);
   }
+}
+:root {
+  --cloudspositionX:0;
+  --rotate:15s; /*la durée souhaitée en secondes*/
+}
+
+.story__article p {
+  animation: fadeInText 1.5s 0.5s forwards;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,30 @@
+/** ANIMATION DES FLEURS PAGE PRINCIPALE AVEC UTILISATION KEYFRAMES POUR LA ROTATION  **/
+@keyframes rotate-flower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* AJOUT DE L'ANIMATION ROTATION SUR LES FLEURS AVEC LA VARIABLE --rotate DEFINIE DANS root */
+.story h2::after,
+.story__article::after,
+.my-studio h2::after,
+.my-studio h2::before,
+.nomination::after,
+.site-footer::before,
+.site-footer::after,
+.site-footer ul::after {
+  animation: rotate-flower var(--rotate) linear infinite;
+}
+
+.sunflower,
+.orchid {
+  animation: rotate-flower 10s linear infinite;
+}
+
+#studio h2::before,
+#studio h2::after {
+  animation: rotate-flower 10s linear infinite;
+}/*# sourceMappingURL=animation.css.map */

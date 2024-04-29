@@ -1,0 +1,25 @@
+/** HEADER VIDEO & ANIMATION DU LOGO  **/
+
+@keyframes floatingLogo{
+	0%{
+		transform: translate(0px, 0px);
+	}
+	50%{
+		transform: translate(0px, -40px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+
+.video-oscars{
+	z-index: 1;
+	position: relative ;
+}
+
+.banner{
+	img{
+		animation: floatingLogo 5s ease-in-out infinite;
+		animation-delay: 1ms;
+	}
+}

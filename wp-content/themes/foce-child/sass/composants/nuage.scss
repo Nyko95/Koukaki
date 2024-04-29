@@ -1,0 +1,68 @@
+/*SECTION PLACE NUAGE*/
+
+.story {
+    & #place {
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-image: url("../assets/images/image_place.png") !important;
+        background-repeat: no-repeat;
+        animation: fade-in-background 2s;
+
+        &>div {
+            @media screen and (max-width:920px) {
+                margin: 0;
+            }
+        }
+
+        & .clouds {
+            position: relative;
+            max-width: none;
+            align-items: end;
+            filter: blur(10px);
+        }
+    }
+}
+
+.big-cloud {
+    top: -25px;
+    right: 50px;
+    position: absolute;
+
+    @media screen and (max-width:920px) {
+        right: -170px;
+    }
+}
+
+.little-cloud {
+    right: 400px;
+    top: 80px;
+    position: absolute;
+
+    @media screen and (max-width:920px) {
+        right: 160px;
+    }
+}
+
+@media screen and (max-width:550px) {
+
+    .big-cloud,
+    .little-cloud {
+        display: none;
+    }
+}
+
+/* SECTION LE LIEUX NUAGE*/
+// effet de fade-in sur l'image de fond de la section
+@keyframes fade-in-background {
+
+    0% {
+        background-position: 0 400px;
+        opacity: 0;
+    }
+
+    100% {
+        background-position: 0;
+        opacity: 1;
+    }
+
+}

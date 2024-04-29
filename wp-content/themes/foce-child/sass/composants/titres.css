@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/** FADE IN SUR SECTIONS **/
+.banner {
+  height: 500px;
+  animation: fadeinDownBanner 5s;
+}
+.banner img {
+  position: absolute;
+  z-index: 2;
+}
+
+/* Style de base pour les titres à animer */
+.word-animation {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Utilisation d'une transition pour un effet de fondu */
+}
+
+/* Animation pour afficher les titres */
+.animate-title .word-animation {
+  opacity: 1; /* Assurez-vous que l'opacité est à 1 pour afficher les titres */
+  animation: animate-title 1s forwards; /* Utilisation de l'animation animate-title */
+}
+
+/* Définition de l'animation */
+@keyframes animate-title {
+  0% {
+    opacity: 0; /* Au début de l'animation, l'opacité est à 0 */
+  }
+  100% {
+    opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
+  }
+}/*# sourceMappingURL=titres.css.map */
