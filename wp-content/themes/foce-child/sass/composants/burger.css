@@ -1,4 +1,6 @@
+@charset "UTF-8";
 /*** HEADER AVEC MENU BURGER ***/
+/* Styles pour le menu de navigation, y compris le menu hamburger*/
 .main-navigation .navigation-burger {
   display: flex;
   flex-direction: row;
@@ -43,6 +45,7 @@
 }
 
 /** MENU NAVIGATION FULLSCREEN **/
+/* Styles pour le menu de navigation principal*/
 .main-navigation #menu ul {
   height: 100%;
   display: flex;
@@ -80,19 +83,19 @@
   animation: rotate-animation 15s infinite linear;
   transform-origin: 50.1% 47.8%;
 }
-#menu ul .logo-menu {
+#menu::before ul .logo-menu {
   height: 15%;
   justify-content: center;
   animation: floatingLogoMenu 4s ease-in-out infinite;
 }
-#menu ul li:nth-child(2)::before {
+#menu::before ul li:nth-child(2)::before {
   content: url("/assets/images/blue_cat.png");
   position: absolute;
   margin-left: -260px;
   margin-top: -40px;
   animation: floatingLogo 8s ease-in-out infinite;
 }
-#menu ul li:nth-child(2)::after {
+#menu::before ul li:nth-child(2)::after {
   content: url("/assets/images/Sunflower.png");
   position: absolute;
   margin-left: 500px;
@@ -100,7 +103,7 @@
   animation: rotate-animation 15s infinite linear;
   transform-origin: 49.5% 44%;
 }
-#menu ul li:nth-child(3)::before {
+#menu::before ul li:nth-child(3)::before {
   content: url("/assets/images/Flower.png");
   position: absolute;
   margin-left: -315px;
@@ -108,7 +111,7 @@
   animation: rotate-animation 15s infinite linear;
   transform-origin: 50.1% 40.8%;
 }
-#menu ul li:nth-child(3)::after {
+#menu::before ul li:nth-child(3)::after {
   content: url("/assets/images/Random_Flower.png");
   position: absolute;
   margin-left: 830px;
@@ -116,41 +119,25 @@
   animation: rotate-animation 15s infinite linear;
   transform-origin: 50.1% 44.8%;
 }
-#menu ul li:nth-child(4)::before {
+#menu::before ul li:nth-child(4)::before {
   content: url("/assets/images/yellow_cat.png");
   position: absolute;
   margin-left: -570px;
   margin-top: 180px;
   animation: floatingLogo 7s ease-in-out infinite;
 }
-#menu ul li:nth-child(4)::after {
+#menu::before ul li:nth-child(4)::after {
   content: url("/assets/images/black_cat.png");
   position: absolute;
   margin-left: 415px;
   margin-top: -100px;
   animation: floatingLogo 9s ease-in-out infinite;
 }
-#menu ul li:nth-child(5)::after {
+#menu::before ul li:nth-child(5)::after {
   content: url("/assets/images/Hibiscus_footer.png");
   position: absolute;
   margin-left: 730px;
   margin-top: -280px;
-}
-
-/******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
-#menu.visible {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  height: 90vh;
-}
-
-main.desactive {
-  display: none;
-}
-
-footer.desactive {
-  display: none;
 }
 
 @keyframes floatingCats {
@@ -174,4 +161,19 @@ footer.desactive {
   100% {
     transform: translate(0px, 0px);
   }
+}
+/*GESTION DE L'APPARITION DU MENU FULLSCREEN */
+#menu.visible {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  height: 90vh; /* Définit la hauteur du menu à 90% de la hauteur de la fenêtre du navigateur */
+}
+
+main.desactive {
+  display: none; /* Cache le contenu principal de la page */
+}
+
+footer.desactive {
+  display: none; /* Cache le pied de page de la page */
 }/*# sourceMappingURL=burger.css.map */

@@ -18,4 +18,15 @@
 .banner img {
   animation: floatingLogo 5s ease-in-out infinite;
   animation-delay: 1ms;
+}
+
+/** MEDIA QUERIES  Mobile **/
+@media (max-width: 425px) {
+  .banner {
+    background-image: url(/assets/images/banner.png);
+    min-height: 500px;
+  }
+  .banner .video-oscars {
+    display: none;
+  }
 }/*# sourceMappingURL=video.css.map */
