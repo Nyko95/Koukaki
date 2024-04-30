@@ -23,8 +23,8 @@ get_header();
         <article id="place">
             <div class="clouds">
                 <!-- integration des nuages pour animation-->
-                <img class="big-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/big_cloud.png'; ?>" alt="Gros nuage" data-bottom-top="transform:translateX(0vw)" data-top-bottom="transform:translateX(-16vw)">
-                <img class="little-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="Petit nuage" data-bottom-top="transform:translateX(0vw)" data-top-bottom="transform:translateX(-16vw)">
+                <img class="big-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/big_cloud.png'; ?>" alt="Gros nuage" data-bottom-top="transform:translateX(0px)" data-top-bottom="transform:translateX(-300px)">
+                <img class="little-cloud" src="<?php echo get_theme_file_uri() . '/assets/images/little_cloud.png'; ?>" alt="Petit nuage" data-bottom-top="transform:translateX(0px)" data-top-bottom="transform:translateX(-300px)">
             </div>
             <div>
                 <h3>Le Lieu</h3>

@@ -5,46 +5,6 @@
     .site-footer::after {
         display: none;
     } 
-    
-    .oscars {
-        display: flex;
-        flex-direction: row;
-        height: 200px;
-        margin-top: 100px;
-        justify-content: space-evenly;
-        animation: fadeinUpSections 5s;	
-    
-        &::before{
-            content: url('../../assets/img/Sunflower.png');
-            position: relative;
-            left: 0em;
-            top: -8em;
-            animation: rotate-animation 15s infinite linear;
-            transform-origin: 49.5% 39%;
-        }
-    
-        h3 {
-            background-image: url("../../assets/img/orange_oscars_bg.png");
-            background-size: 100%;
-            text-align: left;
-            font-size: 2.3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            width: 644px;
-        }
-        .logo-oscars{
-            width: 320px;
-            padding-top: 20px;
-        }
-    
-        &::after {
-            content: url('../../assets/img/orchid.png');
-            position: relative;
-            right: 0em;
-            top: -12em;
-            animation: rotate-animation 15s infinite linear;
-            transform-origin: 49.1% 41.8%;
-          }
-    }
 
     /*DEPLACEMENT DES IMAGES DANS LA NOUVELLE SECTION OSCAR
 
@@ -65,5 +25,5 @@
 .orange-image {
     position: relative;
     bottom: 150px; 
-    left: 180px;
+    left:150px;
   }

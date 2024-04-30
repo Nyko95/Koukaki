@@ -129,7 +129,9 @@ burger.addEventListener('click',()=>{
 	main.classList.toggle('desactive');
 	footer.classList.toggle('desactive');
 	fullmenu.classList.toggle('visible');
- });
+
+ console.log("Le menu burger a été cliqué !");
+});
 
  // GESTION DES LIENS ET APPARITION PAGE PRINCIPALE
    // Sélection de tous les liens ayant la classe "lien"

@@ -23,7 +23,7 @@
 /** MEDIA QUERIES  Mobile **/
 @media (max-width: 425px) {
   .banner {
-    background-image: url(/assets/images/banner.png);
+    background-image: url(../assets/images/banner.png);
     min-height: 500px;
   }
   .banner .video-oscars {
