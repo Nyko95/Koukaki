@@ -48,7 +48,7 @@ get_header();
         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Sunflower.png'; ?>" alt="Sunflower" class="sunflower">
         <!-- Image Orchid -->
         <img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/Orchid.png'; ?>" alt="Orchid" class="orchid">
-    </div>
+</div>
     <!-- Section Oscar -->
     <section id="oscar">
         <?php include(get_stylesheet_directory() . '/template-parts/oscar.php'); ?>

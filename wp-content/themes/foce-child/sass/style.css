@@ -62,6 +62,16 @@
     opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
   }
 }
+@keyframes fadeinDownBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Animation de translation vers le haut */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Retour à la position originale */
+  }
+}
 /** HEADER VIDEO & ANIMATION DU LOGO  **/
 @keyframes floatingLogo {
   0% {
@@ -376,6 +386,7 @@ figure img {
   position: absolute;
   margin-left: 730px;
   margin-top: -280px;
+  animation: rotate-animation 15s infinite linear;
 }
 
 /******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
@@ -457,6 +468,9 @@ footer.desactive {
   }
   .site-footer ul::after {
     display: block;
+  }
+  .sunflower {
+    display: none;
   }
 }
 @media (max-width: 768px) {

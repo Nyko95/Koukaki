@@ -30,4 +30,14 @@
   100% {
     opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
   }
+}
+@keyframes fadeinDownBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px); /* Animation de translation vers le haut */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Retour à la position originale */
+  }
 }/*# sourceMappingURL=titres.css.map */

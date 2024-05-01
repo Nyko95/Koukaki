@@ -163,6 +163,7 @@
         position: absolute;
         margin-left: 730px;
         margin-top: -280px;
+        animation: rotate-animation 15s infinite linear;
       }
     }
   }
@@ -271,6 +272,10 @@ footer.desactive {
         display: block;
       }
     }
+  }
+
+  .sunflower {
+    display: none;
   }
 }
 

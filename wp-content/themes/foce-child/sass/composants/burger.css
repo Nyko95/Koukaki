@@ -142,6 +142,7 @@
   position: absolute;
   margin-left: 730px;
   margin-top: -280px;
+  animation: rotate-animation 15s infinite linear;
 }
 
 /******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
@@ -223,6 +224,9 @@ footer.desactive {
   }
   .site-footer ul::after {
     display: block;
+  }
+  .sunflower {
+    display: none;
   }
 }
 @media (max-width: 768px) {
