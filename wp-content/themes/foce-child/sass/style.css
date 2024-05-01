@@ -87,7 +87,7 @@
 /** MEDIA QUERIES  Mobile **/
 @media (max-width: 425px) {
   .banner {
-    background-image: url(/assets/images/banner.png);
+    background-image: url(../assets/images/banner.png);
     min-height: 500px;
   }
   .banner .video-oscars {
@@ -101,63 +101,25 @@
   display: none;
 }
 
-.oscars {
-  display: flex;
-  flex-direction: row;
-  height: 200px;
-  margin-top: 100px;
-  justify-content: space-evenly;
-  animation: fadeinUpSections 5s;
-}
-.oscars::before {
-  content: url("../../assets/img/Sunflower.png");
-  position: relative;
-  left: 0em;
-  top: -8em;
-  animation: rotate-animation 15s infinite linear;
-  transform-origin: 49.5% 39%;
-}
-.oscars h3 {
-  background-image: url("../../assets/img/orange_oscars_bg.png");
-  background-size: 100%;
-  text-align: left;
-  font-size: 2.3rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  width: 644px;
-}
-.oscars .logo-oscars {
-  width: 320px;
-  padding-top: 20px;
-}
-.oscars::after {
-  content: url("../../assets/img/orchid.png");
-  position: relative;
-  right: 0em;
-  top: -12em;
-  animation: rotate-animation 15s infinite linear;
-  transform-origin: 49.1% 41.8%;
-}
-
 /*DEPLACEMENT DES IMAGES DANS LA NOUVELLE SECTION OSCAR
 
 /* Déplacement de l'image orchid vers la droite */
 .orchid {
   position: relative;
   top: -140px;
-  left: 530px;
+  left: 1150px;
 }
 
 /* Déplacement de l'image sunflower vers la gauche */
 .sunflower {
   position: relative;
-  top: -100px;
-  right: 330px;
+  bottom: 30px;
 }
 
 .orange-image {
   position: relative;
   bottom: 150px;
-  left: 180px;
+  left: 150px;
 }
 
 /*SECTION PLACE NUAGE*/
@@ -356,6 +318,8 @@ figure img {
   margin-top: 30px;
   animation: rotate-animation 15s infinite linear;
   transform-origin: 50.1% 47.8%;
+  width: 172px;
+  height: 172px;
 }
 #menu ul .logo-menu {
   height: 15%;
@@ -386,11 +350,12 @@ figure img {
   transform-origin: 50.1% 40.8%;
 }
 #menu ul li:nth-child(3)::after {
-  content: url("../assets/images/random_flower.png");
+  content: url("../assets/images/purple.png");
   position: absolute;
   margin-left: 890px;
-  margin-top: -200px;
+  margin-top: -150px;
   transform-origin: 50.1% 44.8%;
+  animation: rotate-animation 15s infinite linear;
 }
 #menu ul li:nth-child(4)::before {
   content: url("../assets/images/yellow_cat.png");
@@ -451,7 +416,6 @@ footer.desactive {
     transform: translate(0px, 0px);
   }
 }
-
 @keyframes rotate-animation {
   from {
     transform: rotate(0deg);
@@ -460,11 +424,66 @@ footer.desactive {
     transform: rotate(360deg);
   }
 }
+/** MEDIA QUERIES  768px  Tablette **/
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  .main-navigation #menu li {
+    font-size: 30px;
+  }
+  .navigation-burger .site-title {
+    font-size: 15px;
+  }
+  #menu.visible {
+    font-size: 48px;
+  }
+  .swiper-slide {
+    height: 300px;
+    width: 200px;
+  }
+  .swiper-slide img {
+    height: 300px;
+    width: 200px;
+  }
+  ::before {
+    display: none;
+  }
+  ::after {
+    display: none;
+  }
+  .site-footer ul::after {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .banner {
+    background-image: url(../assets/images/banner.png);
+    min-height: 500px;
+  }
+  .banner .video-oscars {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .orange-image {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-navigation .navigation-burger .site-title {
+    font-size: 15px;
+    margin-right: 48px;
+  }
+}
 :root {
-  --cloudspositionX: 0;
-  --rotate: 15s; /*la durée souhaitée en secondes*/
+  --cloudspositionX:0;
+  --rotate:15s; /*la durée souhaitée en secondes*/
 }
 
 .story__article p {
   animation: fadeInText 1.5s 0.5s forwards;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

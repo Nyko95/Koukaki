@@ -12,14 +12,13 @@
 .orchid {
   position: relative;
   top: -140px;
-  left: 530px;
+  left: 1150px;
 }
 
 /* Déplacement de l'image sunflower vers la gauche */
 .sunflower {
   position: relative;
-  top: -100px;
-  right: 330px;
+  bottom: 30px;
 }
 
 .orange-image {

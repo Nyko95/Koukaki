@@ -1,225 +1,296 @@
 /*** HEADER AVEC MENU BURGER ***/
 
 /* Styles pour le menu de navigation, y compris le menu hamburger*/
-.main-navigation{
-	.navigation-burger{
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		height:80px;
-		width:100%;
-		.site-title{
-			font-size: 22px;
-		}
-		a{
-			width: 90%;
-			text-align: center;
-			padding-left: 130px;
-		}
-		button{
-			width: 10%;
-			.line{
-				width: 30px;
-			}
-		}
-	}
+.main-navigation {
+  .navigation-burger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    .site-title {
+      font-size: 22px;
+    }
+    a {
+      width: 90%;
+      text-align: center;
+      padding-left: 130px;
+    }
+    button {
+      width: 10%;
+      .line {
+        width: 30px;
+      }
+    }
+  }
 }
 
 /** Animation Menu Burger **/
 
-.menu-burger{
-	cursor: pointer;
-    position: relative;
-   	#span1{
-            transform: translateY(-0px);
-        }
-	#span3{
-            transform: translateY(+0px);
-        }
-		&.active {
-			#span1{
-				transform: translateY(+5px) rotateZ(45deg);
-			}
-			#span2{
-				background-color: transparent;
-			}
-			#span3{
-				transform: translateY(-5px) rotateZ(-45deg);
-			}
-		}
+.menu-burger {
+  cursor: pointer;
+  position: relative;
+  #span1 {
+    transform: translateY(-0px);
+  }
+  #span3 {
+    transform: translateY(+0px);
+  }
+  &.active {
+    #span1 {
+      transform: translateY(+5px) rotateZ(45deg);
     }
-
-
+    #span2 {
+      background-color: transparent;
+    }
+    #span3 {
+      transform: translateY(-5px) rotateZ(-45deg);
+    }
+  }
+}
 
 /**  MENU NAVIGATION FULLSCREEN  **/
 
 .main-navigation {
-	#menu{
-		ul {
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-evenly;
-			align-items: center;
-			list-style: none;
-			margin: 0;
-			animation: fadeinUpSections 2s; 
-		}
-		li {
-			position: relative;
-			font-size: 64px;
-			:hover{
-				font-weight: bold;
-				text-shadow: 0 0 10px orange;
-			}
-		}
-		a {
-			display: block;
-			text-decoration: none;
-		}
-	}
+  #menu {
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      animation: fadeinUpSections 2s;
+    }
+    li {
+      position: relative;
+      font-size: 64px;
+      :hover {
+        font-weight: bold;
+        text-shadow: 0 0 10px orange;
+      }
+    }
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
 }
 
 .main-navigation.toggled ul {
-	display:flex;    
+  display: flex;
 }
-
 
 /** Animations Menu Navigation FullScreen **/
 
-#menu{
-	display:none;
-	overflow:hidden;
-	background-color: #FFF5E9;
-	&::before{
-		content: url('/assets/images/Orchid.png');
-		position:absolute;
-		margin-left: -65px;
-		margin-top: 30px;
-		animation: rotate-animation 15s infinite linear;
-		transform-origin: 50.1% 47.8%;
-		width: 172px;
-		height: 172px;
-		}
-	ul{
-		.logo-menu{
-			height: 15%;
-			justify-content: center;
-			animation: floatingLogoMenu 4s ease-in-out infinite;
-		}
-		li:nth-child(2){
-			&::before{
-				content: url('/assets/images/blue_cat.png');
-				position:absolute;
-				margin-left:  -260px;
-				margin-top: -40px;
-				animation: floatingLogo 8s ease-in-out infinite;
-			}
-			&::after{
-				content: url('/assets/images/Sunflower.png');
-				position:absolute;
-				margin-left: 500px;
-				margin-top:-200px;
-				animation: rotate-animation 15s infinite linear;
-				transform-origin: 49.5% 44%;
-			}
-		}
-		li:nth-child(3){
-			&::before{
-				content: url('/assets/images/Flower.png');
-				position:absolute;
-				margin-left:-315px;
-				margin-top:90px;
-				animation: rotate-animation 15s infinite linear;
-				transform-origin: 50.1% 40.8%;
-			}
-			&::after{
-				content: url('/assets/images/random_flower.png');
-				position:absolute;
-				margin-left: 890px;
-				margin-top: -200px;
-				transform-origin: 50.1% 44.8%;	
-			}
-		}
-		li:nth-child(4){
-			&::before{
-				content: url('/assets/images/yellow_cat.png');
-				position:absolute;
-				margin-left: -570px;
-				margin-top: 180px;
-				animation: floatingLogo 7s ease-in-out infinite;
-			}
-			&::after{
-				content: url('/assets/images/black_cat.png');
-				position:absolute;
-				margin-left: 415px;
-				margin-top: -100px;
-				animation: floatingLogo 9s ease-in-out infinite;
-			}
-		}
+#menu {
+  display: none;
+  overflow: hidden;
+  background-color: #fff5e9;
+  &::before {
+    content: url("../assets/images/Orchid.png");
+    position: absolute;
+    margin-left: -65px;
+    margin-top: 30px;
+    animation: rotate-animation 15s infinite linear;
+    transform-origin: 50.1% 47.8%;
+    width: 172px;
+    height: 172px;
+  }
+  ul {
+    .logo-menu {
+      height: 15%;
+      justify-content: center;
+      animation: floatingLogoMenu 4s ease-in-out infinite;
+    }
+    li:nth-child(2) {
+      &::before {
+        content: url("../assets/images/blue_cat.png");
+        position: absolute;
+        margin-left: -260px;
+        margin-top: -40px;
+        animation: floatingLogo 8s ease-in-out infinite;
+      }
+      &::after {
+        content: url("../assets/images/Sunflower.png");
+        position: absolute;
+        margin-left: 500px;
+        margin-top: -200px;
+        animation: rotate-animation 15s infinite linear;
+        transform-origin: 49.5% 44%;
+      }
+    }
+    li:nth-child(3) {
+      &::before {
+        content: url("../assets/images/Flower.png");
+        position: absolute;
+        margin-left: -315px;
+        margin-top: 90px;
+        animation: rotate-animation 15s infinite linear;
+        transform-origin: 50.1% 40.8%;
+      }
+      &::after {
+        content: url("../assets/images/purple.png");
+        position: absolute;
+        margin-left: 890px;
+        margin-top: -150px;
 
-		li:nth-child(5){
-			&::after{
-				content: url('/assets/images/hibiscus_footer.png');
-				position:absolute;
-				margin-left:730px;
-				margin-top: -280px;
-			}
-		}
-	}
+        transform-origin: 50.1% 44.8%;
+        animation: rotate-animation 15s infinite linear;
+      }
+    }
+    li:nth-child(4) {
+      &::before {
+        content: url("../assets/images/yellow_cat.png");
+        position: absolute;
+        margin-left: -570px;
+        margin-top: 180px;
+        animation: floatingLogo 7s ease-in-out infinite;
+      }
+      &::after {
+        content: url("../assets/images/black_cat.png");
+        position: absolute;
+        margin-left: 415px;
+        margin-top: -100px;
+        animation: floatingLogo 9s ease-in-out infinite;
+      }
+    }
+
+    li:nth-child(5) {
+      &::after {
+        content: url("../assets/images/hibiscus_footer.png");
+        position: absolute;
+        margin-left: 730px;
+        margin-top: -280px;
+      }
+    }
+  }
 }
-
 
 /******** GESTION DE L'APPARITION DU MENU FULLSCREEN  **********/
-	
-#menu.visible{
-	display: flex;
-	flex-direction: column;
-	align-content: flex-start;
-	height: 90vh;
- 
+
+#menu.visible {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  height: 90vh;
 }
 
-main.desactive{
-	display:none;
+main.desactive {
+  display: none;
 }
 
-footer.desactive{
-	display:none;
+footer.desactive {
+  display: none;
 }
-
 
 //** Animations  Menu FullScreen **/
 
-@keyframes floatingCats{
-	0%{
-		transform: translate(0px, 0px);
-	}
-	50%{
-		transform: translate(10px, -15px);
-	}
-	100%{
-		transform: translate(0px, 0px);
-	}
+@keyframes floatingCats {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(10px, -15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
-@keyframes floatingLogoMenu{
-	0%{
-		transform: translate(0px, 0px);
-	}
-	50%{
-		transform: translate(0px, 15px);
-	}
-	100%{
-		transform: translate(0px, 0px);
-	}
+@keyframes floatingLogoMenu {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 15px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }
 
 @keyframes rotate-animation {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/** MEDIA QUERIES  768px  Tablette **/
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .main-navigation {
+    #menu {
+      li {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .navigation-burger {
+    .site-title {
+      font-size: 15px;
+    }
+  }
+
+  #menu.visible {
+    font-size: 48px;
+  }
+
+  .swiper-slide {
+    height: 300px;
+    width: 200px;
+    img {
+      height: 300px;
+      width: 200px;
+    }
+  }
+
+  ::before {
+    display: none;
+  }
+
+  ::after {
+    display: none;
+  }
+
+  .site-footer {
+    ul {
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    background-image: url(../assets/images/banner.png);
+    min-height: 500px;
+    .video-oscars {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .orange-image {
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .main-navigation .navigation-burger .site-title {
+    font-size: 15px;
+    margin-right: 48px;
+  }
 }
