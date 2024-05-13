@@ -17,7 +17,7 @@ get_header();
         <article id="" class="story__article">
             <p><?php echo get_theme_mod('story'); ?></p>
         </article>
-
+<!--les personnages avec SWIPERJS-->
         <?php get_template_part('template-parts/characters-swiper'); ?>
 
         <article id="place">
