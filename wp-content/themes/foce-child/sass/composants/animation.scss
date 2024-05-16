@@ -1,13 +1,12 @@
 /** ANIMATION DES FLEURS PAGE PRINCIPALE AVEC UTILISATION KEYFRAMES POUR LA ROTATION  **/
 
-
 @keyframes rotate-flower {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* AJOUT DE L'ANIMATION ROTATION SUR LES FLEURS AVEC LA VARIABLE --rotate DEFINIE DANS root */
@@ -20,15 +19,16 @@
 .site-footer::before,
 .site-footer::after,
 .site-footer ul::after {
-	animation: rotate-flower var(--rotate) linear infinite;
+  animation: rotate-flower var(--rotate) linear infinite;
+  line-height: 0px;
 }
 
 .sunflower,
 .orchid {
-	animation: rotate-flower 10s linear infinite; 
+  animation: rotate-flower 10s linear infinite;
 }
 
 #studio h2::before,
 #studio h2::after {
-	animation: rotate-flower 10s linear infinite;
+  animation: rotate-flower 10s linear infinite;
 }

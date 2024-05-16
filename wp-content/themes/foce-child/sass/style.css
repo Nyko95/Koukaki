@@ -18,6 +18,7 @@
 .site-footer::after,
 .site-footer ul::after {
   animation: rotate-flower var(--rotate) linear infinite;
+  line-height: 0px;
 }
 
 .sunflower,
@@ -33,7 +34,7 @@
 /** FADE IN SUR SECTIONS **/
 .banner {
   height: 500px;
-  animation: fadeinDownBanner 5s;
+  animation: fadeinDownBanner 5s forwards;
 }
 .banner img {
   position: absolute;
@@ -42,34 +43,29 @@
 
 /* Style de base pour les titres à animer */
 .word-animation {
-  position: relative;
+  display: inline-block;
+  margin-right: 10px;
   opacity: 0;
-  transition: opacity 0.3s ease; /* Utilisation d'une transition pour un effet de fondu */
+  transition: opacity 1.5s, transform 2s;
+  transform: translateY(50px); /* Déplace les titres vers le bas */
+  /* Réinitialise la position des titres au départ */
+  transform-origin: bottom;
 }
 
-/* Animation pour afficher les titres */
+/* Applique le fade-in aux titres */
 .animate-title .word-animation {
-  opacity: 1; /* Assurez-vous que l'opacité est à 1 pour afficher les titres */
-  animation: animate-title 1s forwards; /* Utilisation de l'animation animate-title */
+  opacity: 1;
+  transform: translateY(0); /* Retourne les titres à leur position d'origine */
 }
 
-/* Définition de l'animation */
-@keyframes animate-title {
-  0% {
-    opacity: 0; /* Au début de l'animation, l'opacité est à 0 */
-  }
-  100% {
-    opacity: 1; /* À la fin de l'animation, l'opacité est à 1 */
-  }
-}
 @keyframes fadeinDownBanner {
   0% {
     opacity: 0;
-    transform: translateY(-50px); /* Animation de translation vers le haut */
+    transform: translateY(-50px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Retour à la position originale */
+    transform: translateY(0);
   }
 }
 /** HEADER VIDEO & ANIMATION DU LOGO  **/

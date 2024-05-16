@@ -1,4 +1,4 @@
-<? // Get customizer options from parent theme
+<?php // Get customizer options from parent theme
 if (get_stylesheet() !== get_template()) {
     add_filter('pre_update_option_theme_mods_' . get_stylesheet(), function ($value, $old_value) {
         update_option('theme_mods_' . get_template(), $value);

@@ -17,6 +17,7 @@
 .site-footer::after,
 .site-footer ul::after {
   animation: rotate-flower var(--rotate) linear infinite;
+  line-height: 0px;
 }
 
 .sunflower,
